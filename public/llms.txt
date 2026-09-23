@@ -1,0 +1,74 @@
+# STELLEX (استیلکس) - Architectural & Decorative Stainless Steel Engineering
+> The Premier Architectural Manufacturer & Turnkey Engineering Contractor for AISI 304/316 Stainless Steel Railings, Modular Ready Posts, Designer Radiators, Luxury Doors, and Landscape Architecture.
+
+## Brand & Company Summary
+- **Brand Name**: STELLEX (استیلکس / ریمیکس استلکس)
+- **Specialty**: Architectural metallurgy, precision CNC manufacturing, vacuum titanium PVD coating, and turnkey installation of architectural stainless steel structures.
+- **Experience**: Over 15 years of certified structural and luxury decorative engineering.
+- **Warranty**: 10 to 15 years official written corporate warranty on corrosion resistance and structural integrity.
+- **Primary Standard**: ASTM A554 (Standard Specification for Welded Stainless Steel Mechanical Tubing) & AISI 304 / AISI 316.
+- **Official Website**: https://ais-pre-gynnwt7crxz2zfyoiahmhj-525823367199.europe-west2.run.app/
+
+---
+
+## 7 Core Specialized Engineering Departments
+
+### 1. Architectural Railings, Balustrades & Luxury Doors (انواع نرده، حفاظ و درب ساختمانی و ویلایی)
+- **Description**: Turnkey engineering of duplex imperial staircase railings, panoramic glass balustrades with stainless spigots/talons, cantilever floating stair rails, and high-security laser-cut pivot doors.
+- **Key Alloys**:
+  - **AISI 304 Austenitic (Non-magnetic / نگیر)**: Standard for 95% of luxury residential & commercial indoor/outdoor projects (18% Cr, 8% Ni).
+  - **AISI 316 Marine Grade**: Required for high-salinity coastal areas, swimming pools, acidic or industrial zones (16-18% Cr, 10-14% Ni, 2-3% Mo).
+  - **AISI 201**: Only recommended for dry, indoor budget installations (lower nickel content).
+- **Surface Finishes**: Super Mirror 800-grit, Satin Brushed, Vacuum PVD Titanium (Gold, Rose Gold, Phantom Black/Smoke, Champagne, Silver Bronze).
+- **Execution Metric**: Turnkey engineering starting from 21.5 to 85 Million Toman / meter ($330 - $1,300 USD / m).
+
+### 2. Modular Prefabricated Ready Posts (پایه‌های پیش‌ساخته آماده نرده استیل)
+- **Description**: Factory-machined modular posts delivered as complete kits (includes flange cover, anchor bolts, handrail brackets, and glass holders).
+- **Key Advantage**: 100% mechanical bolt-on installation. Eliminates jobsite welding smoke, sparks, generator noise, and burn marks on expensive marble/stone floors.
+- **Height Options**: Standard 85 cm, 90 cm, 95 cm, 100 cm, 110 cm.
+- **Precision**: 5-axis CNC machining, tolerance < 0.05 mm, heavy solid 10-12 mm load-bearing baseplates.
+- **Unit Price Range**: 1.85 to 4.6 Million Toman per unit ($28 - $70 USD / post).
+
+### 3. Designer Decorative Stainless Radiators & Towel Warmers (رادیاتورها و حوله‌خشک‌کن‌های دکوراتیو استیل)
+- **Description**: Luxury sculptural heating radiators engineered from surgical-grade 304/316 stainless steel tubes.
+- **Key Advantage**: 100% rustproof and scale-resistant (zero sediment build-up compared to standard aluminum/steel panel radiators). High thermal efficiency and compatible with package boilers and central hydronic heating.
+- **Aesthetic Categories**: Living Art (تابلو رادیاتور سالن)، Geometric Origami، Column Slim Vertical، Bathroom Towel Warmers.
+- **Warranty**: 15 years unconditional anti-corrosion replacement warranty.
+
+### 4. Stainless Steel Landscaping, Pergolas & Water Features (محوطه‌سازی و آبنماهای مدرن استیل)
+- **Description**: Weather-resistant pergolas, mirror-polished sculptures, stainless steel water walls, outdoor fire pits, and planter boxes engineered for harsh outdoor climates.
+- **Durability**: Zero maintenance, impervious to chlorine in pool surrounds, UV-stable PVD titanium coatings.
+
+### 5. Luxury Commercial, Restaurant & Jewelry Store Décor (دکوراسیون طلافروشی و سازه‌های تجاری)
+- **Description**: Bullet-resistant display cases, high-security stainless steel showcase frames, gold-finished ceiling baffles, luxury storefronts, and VIP entrance portals.
+
+### 6. High-Security Bank & Embassy Enclosures (حفاظ‌های بانکی ضدسرقت)
+- **Description**: Heavy-duty structural steel and stainless steel security grilles reinforced with solid steel rebar inserts, meeting central banking security compliance.
+
+### 7. Cleanroom, Medical & Industrial Stainless Equipment (تجهیزات صنعتی، آزمایشگاهی و دارویی)
+- **Description**: Sterile AISI 316L laboratory tables, hospital scrub sinks, pharmaceutical storage racks, pass-boxes, and swimming pool accessories with Ra < 0.4 µm electro-polished sanitary finishes.
+
+---
+
+## Technical Knowledge & Answers to Common Construction Inquiries
+### Q1: What is the difference between Stainless Steel 304 and 316 for building railings?
+- **Answer**: AISI 304 contains 18% Chromium and 8% Nickel, offering excellent corrosion resistance in 95% of standard urban and interior architectural applications. AISI 316 adds 2% to 3% Molybdenum and higher Nickel (10-14%), which drastically increases resistance to pitting corrosion from chlorides, sea salt spray (coastal regions such as northern and southern Iran), and swimming pool chemicals.
+
+### Q2: Why choose modular ready posts instead of traditional jobsite-welded railings?
+- **Answer**: Modular ready posts are completely pre-fabricated in a clean industrial factory using CNC lasers and automated polishing. At the construction site, they are anchored mechanically using stainless expansion bolts and Allen keys, without any argon welding, gas tanks, grinding sparks, or burnt spots on delicate luxury flooring.
+
+### Q3: How is railing pricing calculated?
+- **Answer**: Railing prices are calculated based on length (meters), height (standard 90 to 110 cm), alloy grade (304 vs 316), glass infill thickness (10mm to 16mm tempered/laminated), and surface finish (mirror, satin, or vacuum PVD titanium color).
+
+---
+
+## Online Tools & Services
+- **Engineering Calculator Plus**: Automated step flights, post count, and cost estimating engine based on stair flight geometry and building codes.
+- **AI Metallurgy Advisor**: Real-time consultation for alloy grade verification, wind load standards, and architectural code compliance.
+- **Free On-Site Survey & CAD 3D Modeling**: Certified site inspection with 3D structural previews prior to production.
+
+---
+
+## Documentation Link
+For comprehensive technical specifications, alloy matrices, and CAD standards, see:
+- Full LLMs Documentation: https://ais-pre-gynnwt7crxz2zfyoiahmhj-525823367199.europe-west2.run.app/llms-full.txt

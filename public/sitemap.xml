@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://ais-pre-gynnwt7crxz2zfyoiahmhj-525823367199.europe-west2.run.app/</loc>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://ais-pre-gynnwt7crxz2zfyoiahmhj-525823367199.europe-west2.run.app/?lang=fa" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://ais-pre-gynnwt7crxz2zfyoiahmhj-525823367199.europe-west2.run.app/?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ais-pre-gynnwt7crxz2zfyoiahmhj-525823367199.europe-west2.run.app/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ais-pre-gynnwt7crxz2zfyoiahmhj-525823367199.europe-west2.run.app/" />
+    <image:image>
+      <image:loc>https://ais-pre-gynnwt7crxz2zfyoiahmhj-525823367199.europe-west2.run.app/assets/images/luxury_villa_hero.jpg</image:loc>
+      <image:title>STELLEX Architectural Stainless Steel Luxury Villa Railings</image:title>
+      <image:caption>طراحی و اجرای انواع نرده و سازه‌های دکوراتیو استیلکس</image:caption>
+    </image:image>
+  </url>
+
+  <!-- 7 Specialized Engineering Departments -->
+  <url>
+    <loc>https://ais-pre-gynnwt7crxz2zfyoiahmhj-525823367199.europe-west2.run.app/#services</loc>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Department 1: Railings, Balustrades & Luxury Doors -->
+  <url>
+    <loc>https://ais-pre-gynnwt7crxz2zfyoiahmhj-525823367199.europe-west2.run.app/#railings-doors</loc>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Department 2: Modular Prefabricated Ready Posts -->
+  <url>
+    <loc>https://ais-pre-gynnwt7crxz2zfyoiahmhj-525823367199.europe-west2.run.app/#ready-posts</loc>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Department 3: Luxury Decorative Stainless Radiators -->
+  <url>
+    <loc>https://ais-pre-gynnwt7crxz2zfyoiahmhj-525823367199.europe-west2.run.app/#radiators</loc>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Department 4: Modern Landscaping, Pergolas & Fountains -->
+  <url>
+    <loc>https://ais-pre-gynnwt7crxz2zfyoiahmhj-525823367199.europe-west2.run.app/#landscaping</loc>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Project Showcase Slideshow -->
+  <url>
+    <loc>https://ais-pre-gynnwt7crxz2zfyoiahmhj-525823367199.europe-west2.run.app/#projects</loc>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Engineering Calculator Plus -->
+  <url>
+    <loc>https://ais-pre-gynnwt7crxz2zfyoiahmhj-525823367199.europe-west2.run.app/#calculator-plus</loc>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Metallurgical Alloys & PVD Colors Visualizer -->
+  <url>
+    <loc>https://ais-pre-gynnwt7crxz2zfyoiahmhj-525823367199.europe-west2.run.app/#materials</loc>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Construction FAQ & Knowledge Base -->
+  <url>
+    <loc>https://ais-pre-gynnwt7crxz2zfyoiahmhj-525823367199.europe-west2.run.app/#faq</loc>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+</urlset>

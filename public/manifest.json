@@ -1,0 +1,25 @@
+{
+  "name": "مهندسی سازه‌های فلزی و دکوراتیو استیل",
+  "short_name": "STELLEX",
+  "description": "طراحی، ساخت و اجرای انواع نرده و حفاظ، دکوراسیون لوکس، محوطه‌سازی، تجهیزات آزمایشگاهی و رادیاتورهای دکوراتیو استیل با ۱۵ سال سابقه مهندسی",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#020617",
+  "theme_color": "#f59e0b",
+  "icons": [
+    {
+      "src": "/assets/images/stellex_hex_logo.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/assets/images/stellex_hex_logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ],
+  "categories": ["architecture", "construction", "engineering", "luxury", "home_decor"],
+  "lang": "fa",
+  "dir": "rtl"
+}

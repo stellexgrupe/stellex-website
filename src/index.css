@@ -1,0 +1,1915 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  
+  /* Persian & Arabic Typography Rules:
+     1. Main Titles (h1, h2): IRANSans
+     2. Subtitles (h3, h4, h5, h6): Vazir
+     3. Body Text & General Content: Shabnam
+  */
+  html[lang="fa"] body,
+  html[lang="ar"] body {
+    font-family: 'Shabnam', 'Shabnam-FD', 'Vazirmatn', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-feature-settings: 'ss01' 1, 'ss02' 1, 'cv01' 1;
+    letter-spacing: -0.015em;
+  }
+
+  html[lang="fa"] h1,
+  html[lang="fa"] h2,
+  html[lang="fa"] .font-heading-main,
+  html[lang="fa"] .font-iransans,
+  html[lang="ar"] h1,
+  html[lang="ar"] h2,
+  html[lang="ar"] .font-heading-main,
+  html[lang="ar"] .font-iransans {
+    font-family: 'IRANSans', 'IRANSansX', 'IranSans', 'Shabnam', 'Vazirmatn', -apple-system, sans-serif;
+    font-weight: 900;
+  }
+
+  html[lang="fa"] h3,
+  html[lang="fa"] h4,
+  html[lang="fa"] h5,
+  html[lang="fa"] h6,
+  html[lang="fa"] .font-heading-sub,
+  html[lang="fa"] .font-vazir,
+  html[lang="ar"] h3,
+  html[lang="ar"] h4,
+  html[lang="ar"] h5,
+  html[lang="ar"] h6,
+  html[lang="ar"] .font-heading-sub,
+  html[lang="ar"] .font-vazir {
+    font-family: 'Vazir', 'Vazirmatn', 'Shabnam', -apple-system, sans-serif;
+    font-weight: 700;
+  }
+
+  html[lang="fa"] p,
+  html[lang="fa"] span,
+  html[lang="fa"] div,
+  html[lang="fa"] a,
+  html[lang="fa"] button,
+  html[lang="fa"] input,
+  html[lang="fa"] textarea,
+  html[lang="fa"] select,
+  html[lang="fa"] label,
+  html[lang="fa"] .font-shabnam,
+  html[lang="ar"] p,
+  html[lang="ar"] span,
+  html[lang="ar"] div,
+  html[lang="ar"] a,
+  html[lang="ar"] button,
+  html[lang="ar"] input,
+  html[lang="ar"] textarea,
+  html[lang="ar"] select,
+  html[lang="ar"] label,
+  html[lang="ar"] .font-shabnam {
+    font-family: 'Shabnam', 'Shabnam-FD', 'Vazirmatn', sans-serif;
+  }
+
+  html[lang="en"] body {
+    font-family: 'Plus Jakarta Sans', 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+    letter-spacing: -0.01em;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  }
+
+  .font-luxury {
+    font-family: 'Cinzel', Georgia, serif;
+    letter-spacing: 0.04em;
+  }
+}
+
+/* Luxina Theme Luxury Animations & Steel Effects */
+@keyframes steelShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.5deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes metalSheen {
+  0% {
+    transform: translateX(-150%) skewX(-25deg);
+  }
+  100% {
+    transform: translateX(250%) skewX(-25deg);
+  }
+}
+
+.animate-steel-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.18) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: steelShimmer 4s infinite linear;
+}
+
+.animate-gold-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(217, 119, 6, 0) 0%,
+    rgba(251, 191, 36, 0.3) 50%,
+    rgba(217, 119, 6, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: steelShimmer 3.5s infinite linear;
+}
+
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+.group:hover .animate-sheen {
+  animation: metalSheen 1.2s ease-in-out forwards;
+}
+
+@keyframes neonRotateClockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes neonSingleTurn {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  6% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.animate-neon-clockwise,
+.group:hover .group-hover-neon-spin {
+  animation: neonRotateClockwise 2.2s linear infinite;
+  will-change: transform;
+}
+
+.animate-neon-single-turn {
+  animation: neonSingleTurn 2s linear forwards;
+  will-change: transform, opacity;
+}
+
+/* Floating House Graphic Effects */
+@keyframes levitationRingSpin {
+  0% {
+    transform: rotateX(75deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(75deg) rotateZ(360deg);
+  }
+}
+
+@keyframes levitationRingSpinReverse {
+  0% {
+    transform: rotateX(75deg) rotateZ(360deg);
+  }
+  100% {
+    transform: rotateX(75deg) rotateZ(0deg);
+  }
+}
+
+@keyframes levitationPulseWave {
+  0% {
+    transform: rotateX(75deg) scale(0.5);
+    opacity: 0.85;
+  }
+  50% {
+    opacity: 0.45;
+  }
+  100% {
+    transform: rotateX(75deg) scale(1.35);
+    opacity: 0;
+  }
+}
+
+@keyframes architecturalScan {
+  0% {
+    top: 6%;
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.85;
+  }
+  88% {
+    opacity: 0.85;
+  }
+  100% {
+    top: 92%;
+    opacity: 0;
+  }
+}
+
+@keyframes glassSheenGleam {
+  0% {
+    transform: translateX(-160%) skewX(-25deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.75;
+  }
+  45% {
+    transform: translateX(260%) skewX(-25deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(260%) skewX(-25deg);
+    opacity: 0;
+  }
+}
+
+.animate-levitation-ring {
+  animation: levitationRingSpin 14s linear infinite;
+}
+
+.animate-levitation-ring-rev {
+  animation: levitationRingSpinReverse 18s linear infinite;
+}
+
+.animate-levitation-pulse-1 {
+  animation: levitationPulseWave 3.6s cubic-bezier(0.2, 0.8, 0.4, 1) infinite;
+}
+
+.animate-levitation-pulse-2 {
+  animation: levitationPulseWave 3.6s cubic-bezier(0.2, 0.8, 0.4, 1) infinite 1.8s;
+}
+
+.animate-architectural-scan {
+  animation: architecturalScan 4.8s ease-in-out infinite alternate;
+}
+
+.animate-glass-sheen {
+  animation: glassSheenGleam 6.5s ease-in-out infinite;
+}
+
+/* Custom neon borders and interactive utility classes */
+
+/* Luxina Metallic text & border gradients */
+.text-steel-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 40%, #94a3b8 70%, #64748b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #fffbeb 0%, #fde047 25%, #d97706 65%, #92400e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-rose-gold-gradient {
+  background: linear-gradient(135deg, #fff1f2 0%, #fecdd3 30%, #fb7185 65%, #be123c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-titanium-gradient {
+  background: linear-gradient(135deg, #94a3b8 0%, #475569 50%, #1e293b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-steel-radial {
+  background: radial-gradient(circle at 50% 0%, rgba(203, 213, 225, 0.15) 0%, rgba(15, 23, 42, 0) 70%);
+}
+
+.bg-gold-radial {
+  background: radial-gradient(circle at 50% 0%, rgba(245, 158, 11, 0.15) 0%, rgba(15, 23, 42, 0) 70%);
+}
+
+/* Luxina Glass Card Styling */
+.lux-card {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(51, 65, 85, 0.6);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lux-card:hover {
+  border-color: rgba(245, 158, 11, 0.5);
+  box-shadow: 0 16px 40px -12px rgba(245, 158, 11, 0.15), 0 0 0 1px rgba(245, 158, 11, 0.2);
+  transform: translateY(-3px);
+}
+
+.lux-card-static {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(51, 65, 85, 0.6);
+}
+
+.lux-glass-header {
+  background: rgba(11, 17, 33, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* Luxury Gold & Steel Buttons */
+.lux-btn-gold {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);
+  color: #020617;
+  font-weight: 800;
+  box-shadow: 0 8px 25px -6px rgba(245, 158, 11, 0.4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.lux-btn-gold:hover {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
+  box-shadow: 0 12px 30px -4px rgba(245, 158, 11, 0.6);
+  transform: translateY(-1px);
+}
+
+.lux-btn-outline {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(71, 85, 105, 0.8);
+  color: #f1f5f9;
+  transition: all 0.3s ease;
+}
+
+.lux-btn-outline:hover {
+  border-color: rgba(245, 158, 11, 0.6);
+  background: rgba(30, 41, 59, 0.9);
+  color: #ffffff;
+}
+
+/* Custom modern scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f59e0b;
+}
+
+/* =========================================================
+   DYNAMIC THEME PALETTE OVERRIDES
+   1. Theme Gold (Default): Royal Gold & Dark Titanium (PRESERVED)
+   2. Theme Silver: Luminous Silver Platinum & Deep Cobalt (User-Friendly Light Silver)
+   3. Theme Emerald: Soothing Sage Green & Mineral Emerald (User-Friendly Calming Sage Spectrum)
+========================================================= */
+
+/* --- THEME 2: COPPER SILVER & WARM NESCAFE MOCHA --- */
+html.theme-silver,
+html.theme-sapphire {
+  color-scheme: light;
+}
+
+html.theme-silver body,
+html.theme-sapphire body {
+  background-color: #f6f1ee !important;
+  background-image: 
+    radial-gradient(at 15% 15%, rgba(217, 119, 6, 0.05) 0px, transparent 50%),
+    radial-gradient(at 85% 85%, rgba(146, 64, 14, 0.06) 0px, transparent 50%),
+    radial-gradient(at 50% 50%, rgba(245, 237, 232, 0.7) 0px, transparent 100%) !important;
+  color: #382418 !important;
+}
+
+html.theme-silver ::selection,
+html.theme-sapphire ::selection {
+  background-color: #78350f;
+  color: #fffbeb;
+}
+
+/* Typography & Headings for Copper Silver & Nescafe Theme */
+html.theme-silver .text-slate-100,
+html.theme-silver .text-slate-200,
+html.theme-silver .text-white,
+html.theme-sapphire .text-slate-100,
+html.theme-sapphire .text-slate-200,
+html.theme-sapphire .text-white {
+  color: #23150d !important;
+}
+
+html.theme-silver .text-slate-300,
+html.theme-silver .text-slate-400,
+html.theme-sapphire .text-slate-300,
+html.theme-sapphire .text-slate-400 {
+  color: #4a3022 !important;
+}
+
+html.theme-silver .text-slate-500,
+html.theme-sapphire .text-slate-500 {
+  color: #6d4e3d !important;
+}
+
+html.theme-silver .text-amber-400,
+html.theme-silver .text-amber-300,
+html.theme-sapphire .text-amber-400,
+html.theme-sapphire .text-amber-300 {
+  color: #92400e !important;
+}
+
+html.theme-silver .text-amber-500,
+html.theme-silver .text-amber-600,
+html.theme-sapphire .text-amber-500,
+html.theme-sapphire .text-amber-600 {
+  color: #b45309 !important;
+}
+
+html.theme-silver .hover\:text-amber-400:hover,
+html.theme-silver .group:hover .group-hover\:text-amber-400,
+html.theme-silver .group\/item:hover .group-hover\/item\:text-amber-400,
+html.theme-sapphire .hover\:text-amber-400:hover,
+html.theme-sapphire .group:hover .group-hover\:text-amber-400,
+html.theme-sapphire .group\/item:hover .group-hover\/item\:text-amber-400 {
+  color: #c2410c !important;
+}
+
+/* Backgrounds & Cards for Copper Silver & Nescafe Theme */
+html.theme-silver .bg-slate-950,
+html.theme-silver .bg-slate-900,
+html.theme-silver .bg-slate-900\/80,
+html.theme-silver .bg-slate-900\/90,
+html.theme-silver .bg-slate-900\/95,
+html.theme-silver .bg-slate-900\/40,
+html.theme-silver .bg-slate-900\/60,
+html.theme-sapphire .bg-slate-950,
+html.theme-sapphire .bg-slate-900,
+html.theme-sapphire .bg-slate-900\/80,
+html.theme-sapphire .bg-slate-900\/90,
+html.theme-sapphire .bg-slate-900\/95,
+html.theme-sapphire .bg-slate-900\/40,
+html.theme-sapphire .bg-slate-900\/60 {
+  background-color: #faf6f3 !important;
+}
+
+html.theme-silver .bg-slate-800,
+html.theme-silver .bg-slate-800\/80,
+html.theme-silver .bg-slate-800\/60,
+html.theme-silver .bg-slate-800\/40,
+html.theme-sapphire .bg-slate-800,
+html.theme-sapphire .bg-slate-800\/80,
+html.theme-sapphire .bg-slate-800\/60,
+html.theme-sapphire .bg-slate-800\/40 {
+  background-color: #ede4de !important;
+}
+
+/* Luxurious Card Styling */
+html.theme-silver .lux-card,
+html.theme-silver .lux-card-static,
+html.theme-sapphire .lux-card,
+html.theme-sapphire .lux-card-static {
+  background: #ffffff !important;
+  border-color: #d8cac0 !important;
+  box-shadow: 0 10px 28px -6px rgba(120, 53, 15, 0.08), 0 3px 8px -2px rgba(87, 62, 49, 0.04) !important;
+}
+
+html.theme-silver .lux-card:hover,
+html.theme-sapphire .lux-card:hover {
+  border-color: #b45309 !important;
+  box-shadow: 0 18px 36px -10px rgba(146, 64, 14, 0.22), 0 0 0 1px rgba(180, 83, 9, 0.3) !important;
+}
+
+/* Header & Sticky Bars */
+html.theme-silver .lux-glass-header,
+html.theme-sapphire .lux-glass-header {
+  background: rgba(246, 241, 238, 0.96) !important;
+  border-bottom: 1px solid #d8cac0 !important;
+}
+
+/* Desktop Main Navigation Links */
+html.theme-silver header nav a,
+html.theme-sapphire header nav a {
+  color: #2c1a11 !important;
+  font-weight: 600 !important;
+}
+
+html.theme-silver header nav a:hover,
+html.theme-sapphire header nav a:hover {
+  color: #92400e !important;
+  background-color: #ede2d8 !important;
+}
+
+/* Mega Dropdown Menu for 6 Engineering Departments */
+html.theme-silver header .grid.grid-cols-2.gap-2\.5,
+html.theme-sapphire header .grid.grid-cols-2.gap-2\.5 {
+  background-color: #ffffff !important;
+  border-color: #d8cac0 !important;
+  box-shadow: 0 20px 45px -8px rgba(70, 40, 20, 0.18) !important;
+}
+
+html.theme-silver header .grid.grid-cols-2.gap-2\.5 a.group\/item,
+html.theme-sapphire header .grid.grid-cols-2.gap-2\.5 a.group\/item {
+  background-color: #faf6f3 !important;
+  border-color: #e8ded6 !important;
+}
+
+html.theme-silver header .grid.grid-cols-2.gap-2\.5 a.group\/item:hover,
+html.theme-sapphire header .grid.grid-cols-2.gap-2\.5 a.group\/item:hover {
+  background-color: #f4ece5 !important;
+  border-color: #b45309 !important;
+}
+
+html.theme-silver header .grid.grid-cols-2.gap-2\.5 a.group\/item h4,
+html.theme-sapphire header .grid.grid-cols-2.gap-2\.5 a.group\/item h4 {
+  color: #23150d !important;
+}
+
+html.theme-silver header .grid.grid-cols-2.gap-2\.5 a.group\/item p,
+html.theme-sapphire header .grid.grid-cols-2.gap-2\.5 a.group\/item p {
+  color: #634839 !important;
+}
+
+html.theme-silver header .grid.grid-cols-2.gap-2\.5 a.group\/item span,
+html.theme-sapphire header .grid.grid-cols-2.gap-2\.5 a.group\/item span {
+  color: #92400e !important;
+  font-weight: 700 !important;
+}
+
+/* Top Bar Overrides - Distinct Luminous Light Royal Purple Banner */
+html.theme-silver .bg-slate-950.border-b.border-slate-800\/80,
+html.theme-sapphire .bg-slate-950.border-b.border-slate-800\/80 {
+  background: linear-gradient(135deg, #581c87 0%, #4c1d95 50%, #6d28d9 100%) !important;
+  border-color: #8b5cf6 !important;
+  color: #ffffff !important;
+}
+
+html.theme-silver .bg-slate-950.border-b.border-slate-800\/80 *,
+html.theme-sapphire .bg-slate-950.border-b.border-slate-800\/80 * {
+  color: #ffffff !important;
+}
+
+html.theme-silver .bg-slate-950.border-b.border-slate-800\/80 .text-amber-400,
+html.theme-sapphire .bg-slate-950.border-b.border-slate-800\/80 .text-amber-400 {
+  color: #f3e8ff !important;
+}
+
+html.theme-silver .bg-slate-950.border-b.border-slate-800\/80 button,
+html.theme-sapphire .bg-slate-950.border-b.border-slate-800\/80 button {
+  background-color: #6d28d9 !important;
+  border-color: #a855f7 !important;
+  color: #ffffff !important;
+}
+
+/* Borders in Nescafe & Copper Tones */
+html.theme-silver .border-slate-800,
+html.theme-silver .border-slate-800\/80,
+html.theme-silver .border-slate-700,
+html.theme-silver .border-slate-700\/80,
+html.theme-silver .border-slate-700\/90,
+html.theme-sapphire .border-slate-800,
+html.theme-sapphire .border-slate-800\/80,
+html.theme-sapphire .border-slate-700,
+html.theme-sapphire .border-slate-700\/80,
+html.theme-sapphire .border-slate-700\/90 {
+  border-color: #d8cac0 !important;
+}
+
+/* Accents, Nescafe Badges & Buttons */
+html.theme-silver .bg-amber-500,
+html.theme-sapphire .bg-amber-500 {
+  background-color: #78350f !important;
+}
+
+html.theme-silver .bg-amber-400,
+html.theme-sapphire .bg-amber-400 {
+  background-color: #92400e !important;
+}
+
+html.theme-silver .bg-amber-600,
+html.theme-sapphire .bg-amber-600 {
+  background-color: #5c2b09 !important;
+}
+
+html.theme-silver .bg-amber-500\/5,
+html.theme-sapphire .bg-amber-500\/5 {
+  background-color: rgba(146, 64, 14, 0.05) !important;
+}
+
+html.theme-silver .bg-amber-500\/10,
+html.theme-silver .bg-amber-500\/15,
+html.theme-sapphire .bg-amber-500\/10,
+html.theme-sapphire .bg-amber-500\/15 {
+  background-color: rgba(146, 64, 14, 0.1) !important;
+}
+
+html.theme-silver .bg-amber-500\/20,
+html.theme-silver .bg-amber-500\/30,
+html.theme-sapphire .bg-amber-500\/20,
+html.theme-sapphire .bg-amber-500\/30 {
+  background-color: rgba(146, 64, 14, 0.16) !important;
+}
+
+html.theme-silver .border-amber-400,
+html.theme-silver .border-amber-500,
+html.theme-sapphire .border-amber-400,
+html.theme-sapphire .border-amber-500 {
+  border-color: #b45309 !important;
+}
+
+html.theme-silver .border-amber-500\/20,
+html.theme-silver .border-amber-500\/30,
+html.theme-silver .border-amber-500\/40,
+html.theme-silver .border-amber-500\/50,
+html.theme-silver .border-amber-500\/60,
+html.theme-sapphire .border-amber-500\/20,
+html.theme-sapphire .border-amber-500\/30,
+html.theme-sapphire .border-amber-500\/40,
+html.theme-sapphire .border-amber-500\/50,
+html.theme-sapphire .border-amber-500\/60 {
+  border-color: rgba(180, 83, 9, 0.35) !important;
+}
+
+html.theme-silver .from-amber-400,
+html.theme-silver .from-amber-500,
+html.theme-silver .from-amber-600,
+html.theme-sapphire .from-amber-400,
+html.theme-sapphire .from-amber-500,
+html.theme-sapphire .from-amber-600 {
+  --tw-gradient-from: #92400e var(--tw-gradient-from-position) !important;
+  --tw-gradient-to: rgb(146 64 14 / 0) var(--tw-gradient-from-position) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+
+html.theme-silver .via-amber-500,
+html.theme-silver .via-amber-600,
+html.theme-sapphire .via-amber-500,
+html.theme-sapphire .via-amber-600 {
+  --tw-gradient-to: rgb(120 53 15 / 0) var(--tw-gradient-to-position) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), #78350f var(--tw-gradient-via-position), var(--tw-gradient-to) !important;
+}
+
+html.theme-silver .to-amber-500,
+html.theme-silver .to-amber-600,
+html.theme-silver .to-amber-700,
+html.theme-sapphire .to-amber-500,
+html.theme-sapphire .to-amber-600,
+html.theme-sapphire .to-amber-700 {
+  --tw-gradient-to: #451a03 var(--tw-gradient-to-position) !important;
+}
+
+/* Copper-Mocha Metallic Gradient for Hero Headings & Accents */
+html.theme-silver .text-gold-gradient,
+html.theme-sapphire .text-gold-gradient {
+  background: linear-gradient(135deg, #23150d 0%, #78350f 40%, #b45309 70%, #d97706 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+html.theme-silver .bg-gold-radial,
+html.theme-sapphire .bg-gold-radial {
+  background: radial-gradient(circle at 50% 0%, rgba(180, 83, 9, 0.14) 0%, rgba(246, 241, 238, 0) 70%) !important;
+}
+
+/* Nescafe Mocha Action Button with Luminous Ivory Text (Eye-catching & High-Contrast) */
+html.theme-silver .lux-btn-gold,
+html.theme-sapphire .lux-btn-gold {
+  background: linear-gradient(135deg, #92400e 0%, #78350f 50%, #542207 100%) !important;
+  box-shadow: 0 8px 24px -5px rgba(120, 53, 15, 0.45) !important;
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.02em !important;
+}
+
+html.theme-silver .lux-btn-gold *,
+html.theme-sapphire .lux-btn-gold * {
+  color: #ffffff !important;
+}
+
+html.theme-silver .lux-btn-gold:hover,
+html.theme-sapphire .lux-btn-gold:hover {
+  background: linear-gradient(135deg, #b45309 0%, #92400e 50%, #78350f 100%) !important;
+  box-shadow: 0 12px 30px -4px rgba(146, 64, 14, 0.6) !important;
+  color: #ffffff !important;
+}
+
+html.theme-silver .lux-btn-outline,
+html.theme-sapphire .lux-btn-outline {
+  background: #ffffff !important;
+  border: 1.5px solid #78350f !important;
+  color: #451a03 !important;
+  font-weight: 700 !important;
+}
+
+html.theme-silver .lux-btn-outline:hover,
+html.theme-sapphire .lux-btn-outline:hover {
+  border-color: #92400e !important;
+  color: #78350f !important;
+  background: #faf2ec !important;
+}
+
+/* Scrollbars */
+html.theme-silver ::-webkit-scrollbar-track,
+html.theme-sapphire ::-webkit-scrollbar-track {
+  background: #3b0764;
+}
+html.theme-silver ::-webkit-scrollbar-thumb,
+html.theme-sapphire ::-webkit-scrollbar-thumb {
+  background: #7c3aed;
+  border-radius: 4px;
+}
+html.theme-silver ::-webkit-scrollbar-thumb:hover,
+html.theme-sapphire ::-webkit-scrollbar-thumb:hover {
+  background: #a855f7 !important;
+}
+
+/* Form Inputs in Copper-Silver / Nescafe Theme */
+html.theme-silver input,
+html.theme-silver textarea,
+html.theme-silver select,
+html.theme-sapphire input,
+html.theme-sapphire textarea,
+html.theme-sapphire select {
+  background-color: #ffffff !important;
+  color: #23150d !important;
+  border-color: #d8cac0 !important;
+}
+
+html.theme-silver select option,
+html.theme-sapphire select option {
+  background-color: #ffffff !important;
+  color: #23150d !important;
+}
+
+html.theme-silver input::placeholder,
+html.theme-silver textarea::placeholder,
+html.theme-sapphire input::placeholder,
+html.theme-sapphire textarea::placeholder {
+  color: #8c7365 !important;
+}
+
+/* Range Input Sliders */
+html.theme-silver input[type="range"],
+html.theme-sapphire input[type="range"] {
+  accent-color: #92400e !important;
+}
+
+/* =========================================================================
+   SPECIALIZED HIGH-CONTRAST LIGHT TYPOGRAPHY ON DARK/DEEP BACKGROUNDS
+   (Color Theory & Typographic Ergonomics for Copper Silver & Nescafe Theme)
+   ========================================================================= */
+
+/* 1. All Saturated / Dark Nescafe Buttons & Primary CTAs */
+html.theme-silver .lux-btn-gold,
+html.theme-silver .lux-btn-gold *,
+html.theme-silver button.bg-amber-500,
+html.theme-silver button.bg-amber-500 *,
+html.theme-silver button.bg-amber-600,
+html.theme-silver button.bg-amber-600 *,
+html.theme-silver button.bg-emerald-600,
+html.theme-silver button.bg-emerald-600 *,
+html.theme-silver .bg-amber-500.text-slate-950,
+html.theme-silver .bg-amber-500.text-slate-950 *,
+html.theme-silver .bg-amber-400.text-slate-950,
+html.theme-silver .bg-amber-400.text-slate-950 *,
+html.theme-sapphire .lux-btn-gold,
+html.theme-sapphire .lux-btn-gold *,
+html.theme-sapphire button.bg-amber-500,
+html.theme-sapphire button.bg-amber-500 *,
+html.theme-sapphire button.bg-amber-600,
+html.theme-sapphire button.bg-amber-600 * {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(44, 26, 17, 0.6) !important;
+}
+
+/* 2. Deep Mocha & Dark Status Badges, Pills & Labels */
+html.theme-silver span.bg-amber-500,
+html.theme-silver span.bg-amber-600,
+html.theme-silver span.bg-amber-700,
+html.theme-silver span.bg-amber-800,
+html.theme-silver span.bg-amber-900,
+html.theme-silver span.bg-amber-950,
+html.theme-silver span.bg-slate-900,
+html.theme-silver span.bg-slate-950,
+html.theme-silver span.bg-slate-900\/70,
+html.theme-silver span.bg-slate-900\/80,
+html.theme-silver span.bg-slate-900\/90,
+html.theme-sapphire span.bg-amber-500,
+html.theme-sapphire span.bg-amber-600,
+html.theme-sapphire span.bg-amber-700,
+html.theme-sapphire span.bg-amber-800,
+html.theme-sapphire span.bg-amber-900,
+html.theme-sapphire span.bg-amber-950,
+html.theme-sapphire span.bg-slate-900,
+html.theme-sapphire span.bg-slate-950 {
+  background-color: #78350f !important;
+  color: #ffffff !important;
+}
+
+html.theme-silver span.bg-amber-500 *,
+html.theme-silver span.bg-amber-600 *,
+html.theme-silver span.bg-amber-700 *,
+html.theme-silver span.bg-amber-800 *,
+html.theme-silver span.bg-amber-900 *,
+html.theme-silver span.bg-amber-950 *,
+html.theme-silver span.bg-slate-900 *,
+html.theme-silver span.bg-slate-950 *,
+html.theme-sapphire span.bg-amber-500 *,
+html.theme-sapphire span.bg-amber-600 *,
+html.theme-sapphire span.bg-amber-700 *,
+html.theme-sapphire span.bg-amber-800 *,
+html.theme-sapphire span.bg-slate-900 *,
+html.theme-sapphire span.bg-slate-950 * {
+  color: #ffffff !important;
+}
+
+/* Inactive vs Active Pill/Tab Selector Buttons Contrast Enforcement */
+html.theme-silver .grid button.lux-card,
+html.theme-silver .flex button.lux-card,
+html.theme-sapphire .grid button.lux-card,
+html.theme-sapphire .flex button.lux-card {
+  background-color: #ffffff !important;
+  border-color: #d8cac0 !important;
+  color: #382418 !important;
+  font-weight: 700 !important;
+}
+
+html.theme-silver .grid button.lux-card:hover,
+html.theme-silver .flex button.lux-card:hover,
+html.theme-sapphire .grid button.lux-card:hover,
+html.theme-sapphire .flex button.lux-card:hover {
+  background-color: #faf2ec !important;
+  border-color: #92400e !important;
+  color: #78350f !important;
+}
+
+/* 3. Grounded Footer with Luminous Light Royal Purple Spectrum */
+html.theme-silver footer#contact,
+html.theme-silver footer.bg-slate-950,
+html.theme-sapphire footer#contact,
+html.theme-sapphire footer.bg-slate-950 {
+  background: linear-gradient(180deg, #3b0764 0%, #4c1d95 60%, #310752 100%) !important;
+  background-image: radial-gradient(at 50% 0%, rgba(168, 85, 247, 0.45) 0px, transparent 75%), linear-gradient(180deg, #3b0764 0%, #4c1d95 60%, #310752 100%) !important;
+  border-top: 1px solid #9333ea !important;
+  color: #ffffff !important;
+}
+
+html.theme-silver footer#contact h3,
+html.theme-silver footer#contact h4,
+html.theme-silver footer#contact .text-white,
+html.theme-silver footer#contact .font-black,
+html.theme-sapphire footer#contact h3,
+html.theme-sapphire footer#contact h4,
+html.theme-sapphire footer#contact .text-white,
+html.theme-sapphire footer#contact .font-black {
+  color: #ffffff !important;
+}
+
+html.theme-silver footer#contact p,
+html.theme-silver footer#contact .text-slate-400,
+html.theme-silver footer#contact .text-slate-300,
+html.theme-silver footer#contact span,
+html.theme-sapphire footer#contact p,
+html.theme-sapphire footer#contact .text-slate-400,
+html.theme-sapphire footer#contact .text-slate-300,
+html.theme-sapphire footer#contact span {
+  color: #f3e8ff !important;
+}
+
+html.theme-silver footer#contact a,
+html.theme-sapphire footer#contact a {
+  color: #ffffff !important;
+}
+
+html.theme-silver footer#contact a:hover,
+html.theme-sapphire footer#contact a:hover {
+  color: #e9d5ff !important;
+}
+
+html.theme-silver footer#contact .bg-slate-900,
+html.theme-silver footer#contact .bg-slate-950,
+html.theme-sapphire footer#contact .bg-slate-900,
+html.theme-sapphire footer#contact .bg-slate-950 {
+  background-color: #581c87 !important;
+  border-color: #9333ea !important;
+  color: #ffffff !important;
+}
+
+html.theme-silver footer#contact .bg-slate-900 *,
+html.theme-silver footer#contact .bg-slate-950 *,
+html.theme-sapphire footer#contact .bg-slate-900 *,
+html.theme-sapphire footer#contact .bg-slate-950 * {
+  color: #ffffff !important;
+}
+
+html.theme-silver footer#contact .border-slate-800,
+html.theme-silver footer#contact .border-slate-800\/80,
+html.theme-silver footer#contact .border-slate-800\/90,
+html.theme-sapphire footer#contact .border-slate-800,
+html.theme-sapphire footer#contact .border-slate-800\/80,
+html.theme-sapphire footer#contact .border-slate-800\/90 {
+  border-color: #8b5cf6 !important;
+}
+
+/* 4. PVD Specular & Metallic Simulation Panel in Hero & Visualizer (Luminous Purple-Grounded Simulation) */
+html.theme-silver .relative.h-56,
+html.theme-silver .relative.h-64,
+html.theme-silver .relative.h-56 *,
+html.theme-silver .relative.h-64 *,
+html.theme-sapphire .relative.h-56,
+html.theme-sapphire .relative.h-64,
+html.theme-sapphire .relative.h-56 *,
+html.theme-sapphire .relative.h-64 * {
+  color: #ffffff !important;
+}
+
+html.theme-silver .relative.h-56 span.text-amber-400,
+html.theme-silver .relative.h-64 span.text-amber-400,
+html.theme-sapphire .relative.h-56 span.text-amber-400,
+html.theme-sapphire .relative.h-64 span.text-amber-400 {
+  color: #fef08a !important;
+}
+
+/* 5. Live Financial Summary Panel in Calculator Plus (Luminous Light Royal Purple Spectrum) */
+html.theme-silver .bg-gradient-to-br.from-slate-900.via-slate-950.to-slate-900,
+html.theme-silver .lg\:col-span-5 .bg-slate-950\/90,
+html.theme-silver #calculator-plus .bg-gradient-to-br.from-slate-900.via-slate-950.to-slate-900,
+html.theme-silver #calculator-plus .bg-slate-950\/90,
+html.theme-sapphire .bg-gradient-to-br.from-slate-900.via-slate-950.to-slate-900,
+html.theme-sapphire .lg\:col-span-5 .bg-slate-950\/90,
+html.theme-sapphire #calculator-plus .bg-gradient-to-br.from-slate-900.via-slate-950.to-slate-900,
+html.theme-sapphire #calculator-plus .bg-slate-950\/90 {
+  background: linear-gradient(135deg, #581c87 0%, #3b0764 50%, #4c1d95 100%) !important;
+  border-color: #a855f7 !important;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.25), 0 12px 32px rgba(168, 85, 247, 0.35) !important;
+}
+
+html.theme-silver .lg\:col-span-5 .bg-slate-950\/90 h3,
+html.theme-silver .lg\:col-span-5 .bg-slate-950\/90 p,
+html.theme-silver .lg\:col-span-5 .bg-slate-950\/90 .text-slate-400,
+html.theme-silver .lg\:col-span-5 .bg-slate-950\/90 span,
+html.theme-silver .lg\:col-span-5 .bg-slate-950\/90 div,
+html.theme-silver #calculator-plus h3,
+html.theme-silver #calculator-plus p,
+html.theme-sapphire .lg\:col-span-5 .bg-slate-950\/90 h3,
+html.theme-sapphire .lg\:col-span-5 .bg-slate-950\/90 p,
+html.theme-sapphire .lg\:col-span-5 .bg-slate-950\/90 .text-slate-400,
+html.theme-sapphire .lg\:col-span-5 .bg-slate-950\/90 span,
+html.theme-sapphire .lg\:col-span-5 .bg-slate-950\/90 div {
+  color: #ffffff !important;
+}
+
+html.theme-silver .lg\:col-span-5 .bg-slate-950\/90 .text-amber-400,
+html.theme-sapphire .lg\:col-span-5 .bg-slate-950\/90 .text-amber-400 {
+  color: #fde68a !important;
+  text-shadow: 0 0 12px rgba(253, 230, 138, 0.5) !important;
+}
+
+/* Why Stellex Bottom CTA Banner & Department Sections (Luminous Light Royal Purple Spectrum) */
+html.theme-silver .bg-gradient-to-r.from-slate-950.via-slate-900.to-slate-950,
+html.theme-sapphire .bg-gradient-to-r.from-slate-950.via-slate-900.to-slate-950 {
+  background: linear-gradient(135deg, #581c87 0%, #4c1d95 50%, #6d28d9 100%) !important;
+  border-color: #a855f7 !important;
+}
+
+html.theme-silver .bg-gradient-to-r.from-slate-950.via-slate-900.to-slate-950 h3,
+html.theme-silver .bg-gradient-to-r.from-slate-950.via-slate-900.to-slate-950 p,
+html.theme-silver .bg-gradient-to-r.from-slate-950.via-slate-900.to-slate-950 span,
+html.theme-silver .bg-gradient-to-r.from-slate-950.via-slate-900.to-slate-950 *,
+html.theme-sapphire .bg-gradient-to-r.from-slate-950.via-slate-900.to-slate-950 h3,
+html.theme-sapphire .bg-gradient-to-r.from-slate-950.via-slate-900.to-slate-950 p,
+html.theme-sapphire .bg-gradient-to-r.from-slate-950.via-slate-900.to-slate-950 span,
+html.theme-sapphire .bg-gradient-to-r.from-slate-950.via-slate-900.to-slate-950 * {
+  color: #ffffff !important;
+}
+
+html.theme-silver .bg-gradient-to-r.from-slate-950.via-slate-900.to-slate-950 .text-amber-400,
+html.theme-sapphire .bg-gradient-to-r.from-slate-950.via-slate-900.to-slate-950 .text-amber-400 {
+  color: #fde68a !important;
+}
+
+/* Department & Showcase Sections - Refined Kalbasi (Dusty Rose / کالباسی) Backgrounds */
+html.theme-silver #project-slideshow,
+html.theme-silver #project-slideshow.bg-slate-950\/80,
+html.theme-silver #ready-posts,
+html.theme-silver #ready-posts.bg-slate-900\/40,
+html.theme-silver section.bg-slate-900\/40,
+html.theme-silver section.bg-slate-950\/80,
+html.theme-sapphire #project-slideshow,
+html.theme-sapphire #project-slideshow.bg-slate-950\/80,
+html.theme-sapphire #ready-posts,
+html.theme-sapphire #ready-posts.bg-slate-900\/40,
+html.theme-sapphire section.bg-slate-900\/40,
+html.theme-sapphire section.bg-slate-950\/80 {
+  background-color: #edd6cf !important;
+  background-image: radial-gradient(at 50% 0%, rgba(224, 152, 136, 0.25) 0px, transparent 80%), radial-gradient(at 0% 100%, rgba(168, 85, 247, 0.08) 0px, transparent 60%) !important;
+  border-top: 1px solid #d9beb5 !important;
+  border-bottom: 1px solid #d9beb5 !important;
+}
+
+/* Headings and content inside Kalbasi Sections */
+html.theme-silver #project-slideshow h2,
+html.theme-silver #ready-posts h2,
+html.theme-sapphire #project-slideshow h2,
+html.theme-sapphire #ready-posts h2 {
+  color: #381e18 !important;
+}
+
+html.theme-silver #project-slideshow p,
+html.theme-silver #ready-posts p,
+html.theme-sapphire #project-slideshow p,
+html.theme-sapphire #ready-posts p {
+  color: #66433b !important;
+}
+
+/* Filter buttons inside Kalbasi Sections */
+html.theme-silver #project-slideshow button.bg-slate-900\/80,
+html.theme-silver #project-slideshow button.bg-slate-900,
+html.theme-sapphire #project-slideshow button.bg-slate-900\/80,
+html.theme-sapphire #project-slideshow button.bg-slate-900 {
+  background-color: #ffffff !important;
+  border-color: #d9beb5 !important;
+  color: #381e18 !important;
+}
+
+html.theme-silver #project-slideshow button.bg-slate-900\/80:hover,
+html.theme-silver #project-slideshow button.bg-slate-900:hover,
+html.theme-sapphire #project-slideshow button.bg-slate-900\/80:hover,
+html.theme-sapphire #project-slideshow button.bg-slate-900:hover {
+  background-color: #f7edea !important;
+  border-color: #b45309 !important;
+  color: #92400e !important;
+}
+
+/* Slideshow Viewport Card in Showcase */
+html.theme-silver #project-slideshow .aspect-\[16\/9\],
+html.theme-sapphire #project-slideshow .aspect-\[16\/9\] {
+  border-color: #c9a69b !important;
+  box-shadow: 0 25px 50px -12px rgba(110, 50, 35, 0.28), 0 0 0 1px rgba(217, 190, 181, 0.4) !important;
+}
+
+/* Slide Titles Inside Slideshow Box - Imperial Royal Gold (زرد سلطنتی درخشان) */
+#project-slideshow .project-slide-title,
+#project-slideshow .aspect-\[16\/9\] h3,
+html.theme-silver #project-slideshow .project-slide-title,
+html.theme-silver #project-slideshow .aspect-\[16\/9\] h3,
+html.theme-sapphire #project-slideshow .project-slide-title,
+html.theme-sapphire #project-slideshow .aspect-\[16\/9\] h3 {
+  color: #facc15 !important;
+  background: linear-gradient(135deg, #fffbeb 0%, #fde047 30%, #facc15 65%, #eab308 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.9)) drop-shadow(0 0 14px rgba(250, 204, 21, 0.55)) !important;
+  font-weight: 900 !important;
+}
+
+/* 6. Active Tabs & Complexity Selector Buttons in Materials */
+html.theme-silver button.bg-amber-500,
+html.theme-sapphire button.bg-amber-500 {
+  background: linear-gradient(135deg, #92400e 0%, #78350f 100%) !important;
+  color: #ffffff !important;
+}
+
+html.theme-silver button.bg-amber-500 *,
+html.theme-sapphire button.bg-amber-500 * {
+  color: #ffffff !important;
+}
+
+/* 7. Quick Floating Theme Switcher Modal & Dropdown (Luminous Royal Purple) */
+html.theme-silver .fixed .bg-slate-900\/95,
+html.theme-silver .fixed .bg-slate-900,
+html.theme-sapphire .fixed .bg-slate-900\/95,
+html.theme-sapphire .fixed .bg-slate-900 {
+  background-color: #4c1d95 !important;
+  border-color: #8b5cf6 !important;
+  color: #ffffff !important;
+}
+
+html.theme-silver .fixed .bg-slate-900\/95 *,
+html.theme-silver .fixed .bg-slate-900 *,
+html.theme-sapphire .fixed .bg-slate-900\/95 *,
+html.theme-sapphire .fixed .bg-slate-900 * {
+  color: #ffffff !important;
+}
+
+html.theme-silver .fixed .bg-slate-900\/95 .text-amber-400,
+html.theme-sapphire .fixed .bg-slate-900\/95 .text-amber-400 {
+  color: #f3e8ff !important;
+}
+
+html.theme-silver .fixed .bg-slate-900\/95 button.bg-amber-500\/20,
+html.theme-sapphire .fixed .bg-slate-900\/95 button.bg-amber-500\/20 {
+  background-color: rgba(168, 85, 247, 0.45) !important;
+  border-color: #c084fc !important;
+  color: #ffffff !important;
+}
+
+/* 8. Modals, Fullscreen Image Backdrops & Toast Overlays (Luminous Purple Backdrop) */
+html.theme-silver .fixed.inset-0.bg-slate-950\/85,
+html.theme-silver .fixed.inset-0.bg-slate-950\/90,
+html.theme-silver .fixed.inset-0.bg-slate-950\/95,
+html.theme-sapphire .fixed.inset-0.bg-slate-950\/85,
+html.theme-sapphire .fixed.inset-0.bg-slate-950\/90,
+html.theme-sapphire .fixed.inset-0.bg-slate-950\/95 {
+  background-color: rgba(59, 7, 100, 0.85) !important;
+  color: #ffffff !important;
+}
+
+html.theme-silver .fixed.inset-0 .lux-card,
+html.theme-sapphire .fixed.inset-0 .lux-card {
+  background-color: #ffffff !important;
+  color: #23150d !important;
+}
+
+html.theme-silver .fixed.inset-0 .lux-card h3,
+html.theme-sapphire .fixed.inset-0 .lux-card h3 {
+  color: #23150d !important;
+}
+
+html.theme-silver .fixed.inset-0 .lux-card label,
+html.theme-sapphire .fixed.inset-0 .lux-card label {
+  color: #23150d !important;
+  font-weight: 700 !important;
+}
+
+html.theme-silver .fixed.inset-0 .lux-card p,
+html.theme-sapphire .fixed.inset-0 .lux-card p {
+  color: #4a3022 !important;
+}
+
+/* 9. Header Dropdowns, Mobile Drawer & Quick Contact Bar (Light Royal Purple Grounding) */
+html.theme-silver .bg-slate-900\/95,
+html.theme-silver .bg-slate-900\/90,
+html.theme-sapphire .bg-slate-900\/95,
+html.theme-sapphire .bg-slate-900\/90 {
+  background-color: #4c1d95 !important;
+  border-color: #8b5cf6 !important;
+}
+
+html.theme-silver .bg-slate-900\/95 *,
+html.theme-silver .bg-slate-900\/90 *,
+html.theme-sapphire .bg-slate-900\/95 *,
+html.theme-sapphire .bg-slate-900\/90 * {
+  color: #ffffff !important;
+}
+
+html.theme-silver .bg-slate-900\/95 .text-amber-400,
+html.theme-silver .bg-slate-900\/90 .text-amber-400,
+html.theme-sapphire .bg-slate-900\/95 .text-amber-400,
+html.theme-sapphire .bg-slate-900\/90 .text-amber-400 {
+  color: #f3e8ff !important;
+}
+
+/* Mobile Drawer Overrides for High Contrast Light Aesthetic with Purple Accents */
+html.theme-silver header .lg\:hidden.bg-slate-950\/95,
+html.theme-sapphire header .lg\:hidden.bg-slate-950\/95 {
+  background-color: #faf6f3 !important;
+  border-color: #d8cac0 !important;
+}
+
+html.theme-silver header .lg\:hidden.bg-slate-950\/95 a,
+html.theme-sapphire header .lg\:hidden.bg-slate-950\/95 a {
+  background-color: #ffffff !important;
+  border-color: #e8ded6 !important;
+  color: #23150d !important;
+  font-weight: 700 !important;
+}
+
+html.theme-silver header .lg\:hidden.bg-slate-950\/95 a:hover,
+html.theme-sapphire header .lg\:hidden.bg-slate-950\/95 a:hover {
+  background-color: #f4ece5 !important;
+  color: #92400e !important;
+}
+
+html.theme-silver header .lg\:hidden.bg-slate-950\/95 .bg-slate-900\/80,
+html.theme-sapphire header .lg\:hidden.bg-slate-950\/95 .bg-slate-900\/80 {
+  background-color: #ffffff !important;
+  border-color: #d8cac0 !important;
+}
+
+html.theme-silver header .lg\:hidden.bg-slate-950\/95 .bg-slate-900\/80 .text-slate-400,
+html.theme-sapphire header .lg\:hidden.bg-slate-950\/95 .bg-slate-900\/80 .text-slate-400 {
+  color: #4a3022 !important;
+}
+
+html.theme-silver header .lg\:hidden.bg-slate-950\/95 button.bg-slate-800\/80,
+html.theme-silver header .lg\:hidden.bg-slate-950\/95 button.bg-slate-800\/60,
+html.theme-sapphire header .lg\:hidden.bg-slate-950\/95 button.bg-slate-800\/80,
+html.theme-sapphire header .lg\:hidden.bg-slate-950\/95 button.bg-slate-800\/60 {
+  background-color: #ede4de !important;
+  border-color: #d8cac0 !important;
+  color: #382418 !important;
+  font-weight: 700 !important;
+}
+
+html.theme-silver header .lg\:hidden.bg-slate-950\/95 button.bg-slate-900,
+html.theme-sapphire header .lg\:hidden.bg-slate-950\/95 button.bg-slate-900 {
+  background-color: #6d28d9 !important;
+  border-color: #8b5cf6 !important;
+  color: #ffffff !important;
+}
+
+/* 10. Quick Action Floating Bar (Light Royal Purple Spectrum) */
+html.theme-silver .fixed.bottom-5 .bg-slate-900\/90,
+html.theme-silver .fixed.bottom-5 .bg-slate-950\/90,
+html.theme-sapphire .fixed.bottom-5 .bg-slate-900\/90,
+html.theme-sapphire .fixed.bottom-5 .bg-slate-950\/90 {
+  background-color: #4c1d95 !important;
+  border-color: #8b5cf6 !important;
+}
+
+html.theme-silver .fixed.bottom-5 *,
+html.theme-sapphire .fixed.bottom-5 * {
+  color: #ffffff !important;
+}
+
+/* 11. AI Consultant Chat Drawer (Luminous Royal Purple Base & Cards) */
+html.theme-silver .fixed.inset-y-0.bg-slate-950,
+html.theme-sapphire .fixed.inset-y-0.bg-slate-950 {
+  background: linear-gradient(180deg, #3b0764 0%, #4c1d95 100%) !important;
+  border-color: #8b5cf6 !important;
+}
+
+html.theme-silver .fixed.inset-y-0.bg-slate-950 .bg-slate-900,
+html.theme-sapphire .fixed.inset-y-0.bg-slate-950 .bg-slate-900 {
+  background-color: #581c87 !important;
+  border-color: #8b5cf6 !important;
+  color: #ffffff !important;
+}
+
+html.theme-silver .fixed.inset-y-0.bg-slate-950 button.bg-slate-900\/80,
+html.theme-sapphire .fixed.inset-y-0.bg-slate-950 button.bg-slate-900\/80 {
+  background-color: #6d28d9 !important;
+  border-color: #8b5cf6 !important;
+  color: #f3e8ff !important;
+  font-weight: 600 !important;
+}
+
+html.theme-silver .fixed.inset-y-0.bg-slate-950 button.bg-slate-900\/80:hover,
+html.theme-sapphire .fixed.inset-y-0.bg-slate-950 button.bg-slate-900\/80:hover {
+  background-color: #7c3aed !important;
+  border-color: #c084fc !important;
+  color: #ffffff !important;
+}
+
+
+/* --- THEME 3: SAGE GREEN & SOFT EMERALD (SOOTHING ECO-LUXURY) --- */
+html.theme-emerald,
+html.theme-rosegold {
+  color-scheme: dark;
+}
+
+html.theme-emerald body,
+html.theme-rosegold body {
+  background-color: #051a14 !important;
+  color: #f0fdf4 !important;
+}
+
+html.theme-emerald ::selection,
+html.theme-rosegold ::selection {
+  background-color: #10b981;
+  color: #022c22;
+}
+
+/* Text Colors for Emerald Theme */
+html.theme-emerald .text-amber-400,
+html.theme-emerald .text-amber-300,
+html.theme-rosegold .text-amber-400,
+html.theme-rosegold .text-amber-300 {
+  color: #34d399 !important;
+}
+
+html.theme-emerald .text-amber-500,
+html.theme-emerald .text-amber-600,
+html.theme-rosegold .text-amber-500,
+html.theme-rosegold .text-amber-600 {
+  color: #10b981 !important;
+}
+
+html.theme-emerald .hover\:text-amber-400:hover,
+html.theme-emerald .group:hover .group-hover\:text-amber-400,
+html.theme-emerald .group\/item:hover .group-hover\/item\:text-amber-400,
+html.theme-rosegold .hover\:text-amber-400:hover,
+html.theme-rosegold .group:hover .group-hover\:text-amber-400,
+html.theme-rosegold .group\/item:hover .group-hover\/item\:text-amber-400 {
+  color: #6ee7b7 !important;
+}
+
+/* Backgrounds & Cards for Emerald Theme */
+html.theme-emerald .bg-slate-950,
+html.theme-rosegold .bg-slate-950 {
+  background-color: #051a14 !important;
+}
+
+html.theme-emerald .bg-slate-900,
+html.theme-emerald .bg-slate-900\/80,
+html.theme-emerald .bg-slate-900\/90,
+html.theme-emerald .bg-slate-900\/95,
+html.theme-rosegold .bg-slate-900,
+html.theme-rosegold .bg-slate-900\/80,
+html.theme-rosegold .bg-slate-900\/90,
+html.theme-rosegold .bg-slate-900\/95 {
+  background-color: #082820 !important;
+}
+
+html.theme-emerald .bg-slate-900\/40,
+html.theme-emerald .bg-slate-900\/60,
+html.theme-rosegold .bg-slate-900\/40,
+html.theme-rosegold .bg-slate-900\/60 {
+  background-color: rgba(8, 40, 32, 0.6) !important;
+}
+
+html.theme-emerald .bg-slate-800,
+html.theme-emerald .bg-slate-800\/80,
+html.theme-emerald .bg-slate-800\/60,
+html.theme-rosegold .bg-slate-800,
+html.theme-rosegold .bg-slate-800\/80,
+html.theme-rosegold .bg-slate-800\/60 {
+  background-color: #0c382c !important;
+}
+
+html.theme-emerald .lux-card,
+html.theme-emerald .lux-card-static,
+html.theme-rosegold .lux-card,
+html.theme-rosegold .lux-card-static {
+  background: rgba(8, 38, 30, 0.85) !important;
+  border-color: rgba(16, 185, 129, 0.25) !important;
+  box-shadow: 0 10px 30px -5px rgba(2, 44, 34, 0.5) !important;
+}
+
+html.theme-emerald .lux-card:hover,
+html.theme-rosegold .lux-card:hover {
+  border-color: rgba(52, 211, 153, 0.6) !important;
+  box-shadow: 0 16px 40px -12px rgba(16, 185, 129, 0.28), 0 0 0 1px rgba(16, 185, 129, 0.3) !important;
+}
+
+html.theme-emerald .lux-glass-header,
+html.theme-rosegold .lux-glass-header {
+  background: rgba(5, 26, 20, 0.9) !important;
+  border-bottom: 1px solid rgba(16, 185, 129, 0.25) !important;
+}
+
+/* Borders for Emerald Theme */
+html.theme-emerald .border-slate-800,
+html.theme-emerald .border-slate-800\/80,
+html.theme-emerald .border-slate-700,
+html.theme-emerald .border-slate-700\/80,
+html.theme-emerald .border-slate-700\/90,
+html.theme-rosegold .border-slate-800,
+html.theme-rosegold .border-slate-800\/80,
+html.theme-rosegold .border-slate-700,
+html.theme-rosegold .border-slate-700\/80,
+html.theme-rosegold .border-slate-700\/90 {
+  border-color: rgba(16, 185, 129, 0.22) !important;
+}
+
+/* Accents & Highlights */
+html.theme-emerald .bg-amber-500,
+html.theme-rosegold .bg-amber-500 {
+  background-color: #10b981 !important;
+}
+
+html.theme-emerald .bg-amber-400,
+html.theme-rosegold .bg-amber-400 {
+  background-color: #34d399 !important;
+}
+
+html.theme-emerald .bg-amber-600,
+html.theme-rosegold .bg-amber-600 {
+  background-color: #059669 !important;
+}
+
+html.theme-emerald .bg-amber-500\/5,
+html.theme-rosegold .bg-amber-500\/5 {
+  background-color: rgba(16, 185, 129, 0.05) !important;
+}
+
+html.theme-emerald .bg-amber-500\/10,
+html.theme-rosegold .bg-amber-500\/10 {
+  background-color: rgba(16, 185, 129, 0.1) !important;
+}
+
+html.theme-emerald .bg-amber-500\/15,
+html.theme-rosegold .bg-amber-500\/15 {
+  background-color: rgba(16, 185, 129, 0.15) !important;
+}
+
+html.theme-emerald .bg-amber-500\/20,
+html.theme-emerald .bg-amber-500\/30,
+html.theme-rosegold .bg-amber-500\/20,
+html.theme-rosegold .bg-amber-500\/30 {
+  background-color: rgba(16, 185, 129, 0.22) !important;
+}
+
+html.theme-emerald .border-amber-400,
+html.theme-emerald .border-amber-500,
+html.theme-rosegold .border-amber-400,
+html.theme-rosegold .border-amber-500 {
+  border-color: #34d399 !important;
+}
+
+html.theme-emerald .border-amber-500\/20,
+html.theme-emerald .border-amber-500\/30,
+html.theme-emerald .border-amber-500\/40,
+html.theme-emerald .border-amber-500\/50,
+html.theme-emerald .border-amber-500\/60,
+html.theme-rosegold .border-amber-500\/20,
+html.theme-rosegold .border-amber-500\/30,
+html.theme-rosegold .border-amber-500\/40,
+html.theme-rosegold .border-amber-500\/50,
+html.theme-rosegold .border-amber-500\/60 {
+  border-color: rgba(52, 211, 153, 0.45) !important;
+}
+
+html.theme-emerald .from-amber-400,
+html.theme-emerald .from-amber-500,
+html.theme-emerald .from-amber-600,
+html.theme-rosegold .from-amber-400,
+html.theme-rosegold .from-amber-500,
+html.theme-rosegold .from-amber-600 {
+  --tw-gradient-from: #34d399 var(--tw-gradient-from-position) !important;
+  --tw-gradient-to: rgb(52 211 153 / 0) var(--tw-gradient-to-position) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+
+html.theme-emerald .via-amber-500,
+html.theme-emerald .via-amber-600,
+html.theme-rosegold .via-amber-500,
+html.theme-rosegold .via-amber-600 {
+  --tw-gradient-to: rgb(16 185 129 / 0) var(--tw-gradient-to-position) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), #10b981 var(--tw-gradient-via-position), var(--tw-gradient-to) !important;
+}
+
+html.theme-emerald .to-amber-500,
+html.theme-emerald .to-amber-600,
+html.theme-emerald .to-amber-700,
+html.theme-rosegold .to-amber-500,
+html.theme-rosegold .to-amber-600,
+html.theme-rosegold .to-amber-700 {
+  --tw-gradient-to: #047857 var(--tw-gradient-to-position) !important;
+}
+
+html.theme-emerald .text-gold-gradient,
+html.theme-rosegold .text-gold-gradient {
+  background: linear-gradient(135deg, #f0fdf4 0%, #a7f3d0 25%, #34d399 65%, #059669 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+html.theme-emerald .bg-gold-radial,
+html.theme-rosegold .bg-gold-radial {
+  background: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.22) 0%, rgba(5, 26, 20, 0) 70%) !important;
+}
+
+html.theme-emerald .lux-btn-gold,
+html.theme-rosegold .lux-btn-gold {
+  background: linear-gradient(135deg, #34d399 0%, #10b981 50%, #059669 100%) !important;
+  box-shadow: 0 8px 25px -6px rgba(16, 185, 129, 0.45) !important;
+  color: #022c22 !important;
+  font-weight: 800 !important;
+}
+
+html.theme-emerald .lux-btn-gold:hover,
+html.theme-rosegold .lux-btn-gold:hover {
+  background: linear-gradient(135deg, #6ee7b7 0%, #34d399 50%, #10b981 100%) !important;
+  box-shadow: 0 12px 30px -4px rgba(16, 185, 129, 0.65) !important;
+}
+
+html.theme-emerald .lux-btn-outline,
+html.theme-rosegold .lux-btn-outline {
+  background: rgba(8, 38, 30, 0.85) !important;
+  border-color: rgba(52, 211, 153, 0.5) !important;
+  color: #ecfdf5 !important;
+}
+
+html.theme-emerald .lux-btn-outline:hover,
+html.theme-rosegold .lux-btn-outline:hover {
+  border-color: #34d399 !important;
+  background: rgba(12, 56, 44, 0.95) !important;
+  color: #ffffff !important;
+}
+
+html.theme-emerald ::-webkit-scrollbar-thumb:hover,
+html.theme-rosegold ::-webkit-scrollbar-thumb:hover {
+  background: #10b981 !important;
+}
+
+/* Specular reflective finish simulation */
+.specular-gold {
+  background: linear-gradient(135deg, #fbbf24 0%, #d97706 30%, #fef08a 50%, #b45309 70%, #fef3c7 100%);
+}
+.specular-silver {
+  background: linear-gradient(135deg, #f8fafc 0%, #cbd5e1 30%, #ffffff 50%, #94a3b8 70%, #f1f5f9 100%);
+}
+.specular-rosegold {
+  background: linear-gradient(135deg, #fda4af 0%, #f43f5e 30%, #fff1f2 50%, #be123c 70%, #fecdd3 100%);
+}
+.specular-black {
+  background: linear-gradient(135deg, #334155 0%, #0f172a 30%, #64748b 50%, #020617 70%, #1e293b 100%);
+}
+.specular-bronze {
+  background: linear-gradient(135deg, #d97706 0%, #78350f 30%, #fde68a 50%, #451a03 70%, #fbbf24 100%);
+}
+
+/* =========================================================================
+   PERFORMANCE & SMOOTHNESS ACCELERATION (سبک‌سازی و روان‌سازی پردازش)
+   ========================================================================= */
+
+/* Content visibility: Off-screen sections defer heavy DOM layout & style calculations */
+#project-slideshow,
+#calculator-plus,
+#why-stellex,
+#materials,
+#faq,
+footer#contact {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
+}
+
+/* GPU Hardware Acceleration for Sticky Header & Floating Overlays */
+header,
+.fixed {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Fast tap response & eliminate 300ms touch delay on mobile */
+a,
+button,
+input,
+select,
+textarea {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Smooth Image Decoding & Contrast */
+img {
+  image-rendering: -webkit-optimize-contrast;
+  content-visibility: auto;
+}
+
+/* Respect user preferences for reduced motion on battery saving / low-power devices */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Mobile Landscape Optimization & Forced Virtual Rotation Mode */
+@media screen and (max-width: 860px) and (orientation: portrait) {
+  body.force-landscape-active {
+    overflow: hidden !important;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  body.force-landscape-active #root {
+    transform: rotate(90deg);
+    transform-origin: top left;
+    position: fixed;
+    top: 0;
+    left: 100vw;
+    width: 100vh;
+    height: 100vw;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    z-index: 10;
+  }
+}
+
+/* Mobile Landscape Hero Stat Cards: Single Row Layout */
+@media screen and (max-width: 900px) and (orientation: landscape) {
+  #hero-stat-cards-container {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    gap: 0.5rem !important;
+    margin-top: 0.85rem !important;
+  }
+
+  #hero-stat-cards-container > div {
+    width: auto !important;
+    flex: 1 1 0% !important;
+    min-width: 0 !important;
+    max-width: 25% !important;
+  }
+
+  #hero-stat-cards-container .stat-card-inner {
+    padding: 0.35rem 0.5rem !important;
+    gap: 0.35rem !important;
+  }
+
+  #hero-stat-cards-container .stat-card-label {
+    font-size: 8.5px !important;
+    white-space: nowrap !important;
+  }
+
+  #hero-stat-cards-container .stat-card-value {
+    font-size: 12px !important;
+  }
+}
+
+/* Forced Landscape virtual mode single row support */
+body.force-landscape-active #hero-stat-cards-container {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+  gap: 0.5rem !important;
+}
+
+body.force-landscape-active #hero-stat-cards-container > div {
+  width: auto !important;
+  flex: 1 1 0% !important;
+  min-width: 0 !important;
+  max-width: 25% !important;
+}
+
+body.force-landscape-active #hero-stat-cards-container .stat-card-inner {
+  padding: 0.35rem 0.5rem !important;
+  gap: 0.35rem !important;
+}
+
+body.force-landscape-active #hero-stat-cards-container .stat-card-label {
+  font-size: 8.5px !important;
+  white-space: nowrap !important;
+}
+
+body.force-landscape-active #hero-stat-cards-container .stat-card-value {
+  font-size: 12px !important;
+}
+
+/* Mobile Landscape Services Category Tabs: 2 Rows (Row 1: 4 Tabs, Row 2: 3 Tabs) */
+@media screen and (max-width: 900px) and (orientation: landscape) {
+  #services-category-tabs {
+    display: grid !important;
+    grid-template-columns: repeat(12, 1fr) !important;
+    gap: 0.35rem !important;
+    width: 100% !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  /* Row 1: Exactly 4 Tabs (each occupies 3 out of 12 columns = 25% width) */
+  #services-category-tabs > button:nth-child(1),
+  #services-category-tabs > button:nth-child(2),
+  #services-category-tabs > button:nth-child(3),
+  #services-category-tabs > button:nth-child(4) {
+    grid-column: span 3 !important;
+  }
+
+  /* Row 2: Remaining 3 Tabs (each occupies 4 out of 12 columns = 33.3% width) */
+  #services-category-tabs > button:nth-child(5),
+  #services-category-tabs > button:nth-child(6),
+  #services-category-tabs > button:nth-child(7) {
+    grid-column: span 4 !important;
+  }
+
+  #services-category-tabs .service-cat-tab {
+    padding: 0.35rem 0.5rem !important;
+    border-radius: 0.75rem !important;
+    flex-direction: row !important;
+    gap: 0.35rem !important;
+    justify-content: center !important;
+    align-items: center !important;
+    min-height: 38px !important;
+  }
+
+  #services-category-tabs .tab-icon-box {
+    padding: 0.2rem !important;
+    border-radius: 0.375rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  #services-category-tabs .tab-icon-box svg {
+    width: 0.9rem !important;
+    height: 0.9rem !important;
+  }
+
+  #services-category-tabs .tab-title {
+    font-size: 10.5px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    line-height: 1.15 !important;
+  }
+}
+
+/* Forced Landscape Virtual Mode Support for Category Tabs */
+body.force-landscape-active #services-category-tabs {
+  display: grid !important;
+  grid-template-columns: repeat(12, 1fr) !important;
+  gap: 0.35rem !important;
+  width: 100% !important;
+  margin-bottom: 0.5rem !important;
+}
+
+body.force-landscape-active #services-category-tabs > button:nth-child(1),
+body.force-landscape-active #services-category-tabs > button:nth-child(2),
+body.force-landscape-active #services-category-tabs > button:nth-child(3),
+body.force-landscape-active #services-category-tabs > button:nth-child(4) {
+  grid-column: span 3 !important;
+}
+
+body.force-landscape-active #services-category-tabs > button:nth-child(5),
+body.force-landscape-active #services-category-tabs > button:nth-child(6),
+body.force-landscape-active #services-category-tabs > button:nth-child(7) {
+  grid-column: span 4 !important;
+}
+
+body.force-landscape-active #services-category-tabs .service-cat-tab {
+  padding: 0.35rem 0.5rem !important;
+  border-radius: 0.75rem !important;
+  flex-direction: row !important;
+  gap: 0.35rem !important;
+  justify-content: center !important;
+  align-items: center !important;
+  min-height: 38px !important;
+}
+
+body.force-landscape-active #services-category-tabs .tab-icon-box {
+  padding: 0.2rem !important;
+  border-radius: 0.375rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+body.force-landscape-active #services-category-tabs .tab-icon-box svg {
+  width: 0.9rem !important;
+  height: 0.9rem !important;
+}
+
+body.force-landscape-active #services-category-tabs .tab-title {
+  font-size: 10.5px !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  line-height: 1.15 !important;
+}
+
+/* Quick Contact Bar Mobile Landscape Optimization */
+@media screen and (max-width: 1000px) and (orientation: landscape), screen and (max-height: 550px) {
+  #quick-contact-bar-root {
+    bottom: 0.5rem !important;
+    z-index: 45 !important;
+  }
+
+  [dir="rtl"] #quick-contact-bar-root {
+    left: 0.5rem !important;
+    right: auto !important;
+  }
+
+  [dir="ltr"] #quick-contact-bar-root {
+    right: 0.5rem !important;
+    left: auto !important;
+  }
+
+  #quick-contact-action-cluster > div {
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 0.25rem !important;
+    padding: 0.25rem 0.35rem !important;
+    border-radius: 9999px !important;
+    background-color: rgba(2, 6, 23, 0.85) !important;
+    backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(245, 158, 11, 0.25) !important;
+  }
+
+  #quick-contact-action-cluster button,
+  #quick-contact-action-cluster a {
+    padding: 0.35rem !important;
+    border-radius: 9999px !important;
+  }
+
+  #quick-contact-action-cluster span {
+    display: none !important;
+  }
+
+  #quick-contact-action-cluster svg {
+    width: 0.9rem !important;
+    height: 0.9rem !important;
+  }
+}
+
+body.force-landscape-active #quick-contact-bar-root {
+  bottom: 0.5rem !important;
+  left: 0.5rem !important;
+  z-index: 45 !important;
+}
+
+body.force-landscape-active #quick-contact-action-cluster > div {
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 0.25rem !important;
+  padding: 0.25rem 0.35rem !important;
+  border-radius: 9999px !important;
+  background-color: rgba(2, 6, 23, 0.85) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(245, 158, 11, 0.25) !important;
+}
+
+body.force-landscape-active #quick-contact-action-cluster button,
+body.force-landscape-active #quick-contact-action-cluster a {
+  padding: 0.35rem !important;
+  border-radius: 9999px !important;
+}
+
+body.force-landscape-active #quick-contact-action-cluster span {
+  display: none !important;
+}
+
+body.force-landscape-active #quick-contact-action-cluster svg {
+  width: 0.9rem !important;
+  height: 0.9rem !important;
+}
+
+/* Hide ONLY the Floating Theme Switcher Tab in Mobile Landscape Orientation */
+@media screen and (max-width: 1024px) and (orientation: landscape), screen and (max-height: 550px) {
+  #floating-theme-switcher,
+  #floating-theme-switcher-btn {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
+  }
+
+  /* Guarantee Quick Contact Bar (AI Advisor, WhatsApp, Phone) remains fully active and minimal */
+  #quick-contact-bar-root {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+}
+
+body.force-landscape-active #floating-theme-switcher,
+body.force-landscape-active #floating-theme-switcher-btn {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+}
+
+body.force-landscape-active #quick-contact-bar-root {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+
+
+
+

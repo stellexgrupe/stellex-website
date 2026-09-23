@@ -1,0 +1,52 @@
+# ==============================================================================
+# STELLEX (استیلکس) Architectural & Decorative Stainless Steel Engineering
+# Official Robots.txt optimized for Search Engines & Generative AI Crawlers
+# ==============================================================================
+
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Explicitly welcoming Generative AI & LLM Search Engines
+# (ChatGPT Search, Perplexity AI, Google Gemini / AI Overviews, Anthropic Claude, Microsoft Copilot)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# LLM Documentation Standards
+# Discoverable Knowledge Graph & Plaintext Documentation for AI Models
+# https://llmstxt.org
+# llms.txt: /llms.txt
+# llms-full.txt: /llms-full.txt
+
+Sitemap: https://ais-pre-gynnwt7crxz2zfyoiahmhj-525823367199.europe-west2.run.app/sitemap.xml
+Host: https://ais-pre-gynnwt7crxz2zfyoiahmhj-525823367199.europe-west2.run.app

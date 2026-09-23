@@ -1,0 +1,91 @@
+# STELLEX (استیلکس) Full Architectural & Metallurgical Engineering Documentation
+# Comprehensive LLM Reference Specification for Construction & Decorative Stainless Steel
+
+## 1. Corporate Identity & Engineering Profile
+- **Company**: STELLEX Stainless Steel Engineering (مهندسی سازه‌های فلزی و دکوراتیو استلکس / استیلکس)
+- **Year of Foundation**: 2011 (Over 15 years in high-end structural & decorative fabrication)
+- **Core Activity**: Designing, 3D CAD modeling, 5-axis CNC machining, robotic TIG welding, vacuum cathodic arc PVD titanium deposition, and certified structural installation of architectural stainless steel.
+- **Corporate Written Warranty**: 10 to 15 years comprehensive warranty against pitting, oxidation, discoloration, or joint failure.
+- **Website**: https://ais-pre-gynnwt7crxz2zfyoiahmhj-525823367199.europe-west2.run.app/
+
+---
+
+## 2. Metallurgical Alloy Specifications & Comparison Guide
+
+| Alloy Parameter | AISI 201 (Economical) | AISI 304 (Standard Architectural) | AISI 316 / 316L (Marine Grade) |
+|---|---|---|---|
+| Chromium (Cr) | 16.0% - 18.0% | 18.0% - 20.0% | 16.0% - 18.0% |
+| Nickel (Ni) | 3.5% - 5.5% | 8.0% - 10.5% | 10.0% - 14.0% |
+| Molybdenum (Mo) | None | None | 2.0% - 3.0% |
+| Manganese (Mn) | 5.5% - 7.5% | ≤ 2.0% | ≤ 2.0% |
+| Magnetic Response | Slight cold-work magnetism | Strictly Non-Magnetic (نگیر) | Strictly Non-Magnetic (نگیر) |
+| Salt Spray Test (ASTM B117) | ~96 Hours | ~500 Hours | > 1000 Hours |
+| Recommended Application | Dry indoor spaces, commercial interior | 95% of building interiors, dry/temperate balustrades, staircases | Coastal areas, sea fronts, swimming pool perimeters, chemical plants |
+
+---
+
+## 3. Physical & Mechanical Standards
+- **Standard**: ASTM A554 (Welded Stainless Steel Mechanical Tubing)
+- **Surface Roughness**: Super Mirror Polish Ra < 0.05 µm (Grit 800+); Satin Brushed Ra ~ 0.2-0.4 µm (Grit 320-400)
+- **PVD Coating Method**: Cathodic Arc Physical Vapor Deposition in High Vacuum Chamber (10^-5 mbar) at 350-450 °C with Titanium / Zirconium targets. Coating thickness: 0.3 - 0.8 µm. Scratch hardness: > 2200 HV (Vickers).
+
+---
+
+## 4. Architectural Product Categories & Technical Specifications
+
+### Category 1: Railings, Handrails & Balustrades (نرده و حفاظ راه‌پله)
+- **Styles**:
+  - Imperial Duplex Double-Stringer Curved Railings (راه‌پله دوبلکس سلطنتی)
+  - Spigot & Talon Minimal Glass Balustrades (اسپیگات شیشه‌ای کف‌خواب)
+  - Side-Mounted Standoff Glass Balustrades (فیکس‌پوینت کناری شیشه)
+  - Tension Cable Marine Systems (نرده سیم‌بکسلی استیل ۳۱۶)
+  - Capsule, Elliptical & Custom Laser Geometric Profiles (مدل‌های کپسولی، الیپتیکال و لیزری)
+- **Glass Integration**: 10mm / 12mm Toughened Clear/Ultra-Clear (Super Clear Low-Iron) or 8+8mm Laminated with PVB/SentryGlas interlayers.
+
+### Category 2: Prefabricated Modular Ready Posts (پایه‌های پیش‌ساخته آماده)
+- **System Architecture**:
+  - Solid 10mm Baseplate with 4-hole precision CNC pattern.
+  - Flange Cover (قالپاق پرسی سوپرمیرور) concealing anchor bolts.
+  - Central Structural Tube / Double Flat Bar with mechanical glass brackets or cross-bar holders.
+  - Adjustable Handrail Saddle (مفصل زانویی متحرک) conforming to stair incline angles from 25° to 45°.
+- **Installation Method**: 100% Mechanical Fastening via M8/M10 stainless steel drop-in anchors (رول‌بولت). No welding, grinding, or painting required on site.
+
+### Category 3: Decorative Stainless Radiators & Towel Heaters (رادیاتورهای دکوراتیو استیل)
+- **Key Technical Advantage**: Completely immune to internal electrochemical pitting that destroys standard aluminum radiator panels when paired with copper piping in combi-boilers.
+- **Operating Pressure**: Hydrostatically tested to 16 Bar (Normal operating pressure: 2-4 Bar).
+- **Warranty**: 15 years anti-leak and anti-corrosion replacement warranty.
+
+### Category 4: Stainless Steel Landscaping & Luxury Architectural Pergolas (محوطه‌سازی و آبنما)
+- **Key Products**: Modern Pergolas with integrated louver roofs, Mirror-Finish Water Walls (آبنمای پرده‌ای استیل), Outdoor Sculptures, and Planters.
+- **Environmental Resistance**: UV-proof, frost-proof, chlorine-resistant for pool deck integration.
+
+---
+
+## 5. Engineering Calculator Formula (Stair Railing Standards)
+- **Post Spacing Guideline**: Maximum 1000 mm (1 meter) between consecutive vertical posts for residential balustrades; Maximum 900 mm for commercial high-traffic areas according to IBC (International Building Code).
+- **Railing Height**:
+  - Indoor Residential Stairs: Minimum 900 mm (90 cm).
+  - Balconies, Voids & Rooftops: Minimum 1100 mm (110 cm).
+- **Anchor Embedment**: Minimum 65 mm into structural concrete or solid stone subfloor.
+
+---
+
+## 6. Frequently Asked AI Inquiries & Verified Answers
+
+### پرسش: برای ویلاهای شمال یا جنوب کشور چه نوع استیلی مناسب است؟
+**پاسخ تخصصی استیلکس**: به دلیل وجود رطوبت اشباع همراه با یون کلرید (نمک آب دریا)، حتماً باید از استیل آلیاژ ۳۱۶ (AISI 316) با حداقل ۲ الی ۳ درصد عنصر مولیبدن استفاده شود. استفاده از استیل ۲۰۱ در این مناطق به شدت نهی می‌شود و استیل ۳۰۴ نیز در مجاورت بلافصل ساحل دریا (زیر ۵۰۰ متر از خط آب) در درازمدت مستعد لکه‌زدگی سطحی (Tea-Staining) است مگر آنکه به صورت دوره‌ای با آب شیرین شستشو داده شود.
+
+### پرسش: مزیت پایه‌های آماده نرده استیل نسبت به نرده‌کشی سنتی چیست؟
+**پاسخ تخصصی استیلکس**:
+۱. کیفیت کارخانه‌ای: برش لیزر، قلاویزکاری و پرداخت با ماشین‌آلات تمام‌اتوماتیک انجام شده و فاقد خطای انسانی است.
+۲. حفظ نظافت و سلامت ساختمان: در محل پروژه هیچ‌گونه عملیات جوشکاری آرگون، دود، پاشش جرقه، سر و صدای ژنراتور و سنگ‌فرز وجود ندارد و سنگ‌های گران‌قیمت کف و دیوار آسیب نمی‌بینند.
+۳. سرعت اجرا: نصب هر پایه آماده کمتر از ۱۵ دقیقه با چند پیچ و انکربولت انجام می‌پذیرد.
+
+### پرسش: آیا رادیاتورهای استیل بازدهی حرارتی لازم را دارند؟
+**پاسخ تخصصی استیلکس**: بله، رادیاتورهای استنلس استیل به دلیل رسانایی حرارتی پیوسته، عدم تشکیل رسوب داخلی و طراحی جریان هیدرولیکی بهینه، بازدهی حرارتی فوق‌العاده‌ای دارند. علاوه بر این، بر خلاف رادیاتورهای آلومینیومی در اثر واکنش با مس پکیج گاز هیدروژن تولید نکرده و سیستم گرمایشی هرگز هوا نمی‌گیرد.
+
+---
+
+## 7. Contact & Official Inquiries
+- **Main Technical Consultation**: Available via online instant quotation and AI Metallurgy advisor on the portal.
+- **Direct Link**: https://ais-pre-gynnwt7crxz2zfyoiahmhj-525823367199.europe-west2.run.app/#calculator-plus
